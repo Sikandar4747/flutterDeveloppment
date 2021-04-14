@@ -16,7 +16,7 @@ class Quizzler extends StatelessWidget {
             child: Text('Quizzler'),
           ),
         ),
-        backgroundColor: Colors.teal[800],
+       backgroundColor: Colors.teal[800],
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.0),
