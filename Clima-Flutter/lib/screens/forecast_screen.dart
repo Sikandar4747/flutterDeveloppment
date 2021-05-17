@@ -1,4 +1,3 @@
-// import 'package:clima/screens/details_screen.dart';
 import 'package:clima/services/date_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:clima/utilities/constants.dart';
@@ -140,17 +139,3 @@ class DailyWIdget extends StatelessWidget {
     );
   }
 }
-// Container(
-// height: 200.0,
-// width: double.infinity,
-// color: Colors.blueAccent,
-// child: TextButton(
-// onPressed: () {
-// showModalBottomSheet(
-// context: context,
-// builder: (context) => DetailsScreen(),
-// );
-// },
-// child: Text('I am a god'),
-// ),
-// ),
