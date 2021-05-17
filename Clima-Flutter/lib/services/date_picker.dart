@@ -1,8 +1,5 @@
 class DatePicker {
-  DatePicker(this.time) {}
-  int time;
-
-  String getWeekday() {
+  String getWeekday(int time) {
     var data = DateTime.fromMillisecondsSinceEpoch(time * 1000);
     if (data.weekday == 1) {
       return 'Monday';
@@ -23,7 +20,66 @@ class DatePicker {
     }
   }
 
-  String getMonthName() {
+  String hour(int time) {
+    var data = DateTime.fromMillisecondsSinceEpoch(time * 1000);
+    String hour;
+    hour = '${data.hour}';
+    if (hour == '1') {
+      return '01';
+    } else if (hour == '2') {
+      return '02';
+    } else if (hour == '3') {
+      return '03';
+    } else if (hour == '4') {
+      return '04';
+    } else if (hour == '5') {
+      return '05';
+    } else if (hour == '6') {
+      return '06';
+    } else if (hour == '7') {
+      return '07';
+    } else if (hour == '8') {
+      return '08';
+    } else if (hour == '9') {
+      return '09';
+    } else {
+      return hour;
+    }
+  }
+
+  String minute(int time) {
+    var data = DateTime.fromMillisecondsSinceEpoch(time * 1000);
+    String hour;
+    hour = '${data.minute}';
+    if (hour == '1') {
+      return '01';
+    } else if (hour == '2') {
+      return '02';
+    } else if (hour == '3') {
+      return '03';
+    } else if (hour == '4') {
+      return '04';
+    } else if (hour == '5') {
+      return '05';
+    } else if (hour == '6') {
+      return '06';
+    } else if (hour == '7') {
+      return '07';
+    } else if (hour == '8') {
+      return '08';
+    } else if (hour == '9') {
+      return '09';
+    } else {
+      return hour;
+    }
+  }
+
+  String getDay(int time) {
+    var data = DateTime.fromMillisecondsSinceEpoch(time * 1000);
+    return data.day.toString();
+  }
+
+  String getMonthName(int time) {
     var data = DateTime.fromMillisecondsSinceEpoch(time * 1000);
     if (data.month == 1) {
       return 'Jan';
@@ -38,7 +94,7 @@ class DatePicker {
     } else if (data.month == 6) {
       return 'Jun';
     } else if (data.month == 7) {
-      return 'July';
+      return 'Jul';
     } else if (data.month == 8) {
       return 'Aug';
     } else if (data.month == 9) {

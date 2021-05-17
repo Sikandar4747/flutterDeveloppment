@@ -1,13 +1,26 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 const kTempTextStyle = TextStyle(
-  fontFamily: 'Spartan MB',
-  fontSize: 100.0,
+  fontSize: 55.0,
+  fontWeight: FontWeight.w600,
+);
+const kSun = TextStyle(
+  fontSize: 20.0,
+  fontWeight: FontWeight.w600,
+);
+const kWindStyle = TextStyle(
+  fontSize: 15.0,
+  fontWeight: FontWeight.w500,
+);
+const kValueStyle = TextStyle(
+  fontWeight: FontWeight.w600,
+  fontSize: 20.0,
 );
 
 const kMessageTextStyle = TextStyle(
-  fontFamily: 'Spartan MB',
-  fontSize: 60.0,
+  fontSize: 30.0,
+  fontWeight: FontWeight.w600,
 );
 
 const kButtonTextStyle = TextStyle(

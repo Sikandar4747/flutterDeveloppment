@@ -20,22 +20,23 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void getLocationData() async {
     WeatherModel weatherModel = WeatherModel();
     var weatherData = await weatherModel.getLocationWeather();
+    var cityCountry = await weatherModel.getCityCountry(
+        weatherData['lat'], weatherData['lon']);
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-      return LocationScreen(locationWeather: weatherData);
+      return LocationScreen(
+        locationWeather: weatherData,
+        cityFul: cityCountry['name'],
+        countryFul: cityCountry['sys']['country'],
+      );
     }));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text('My weather'),
-        ),
-      ),
       body: Center(
         child: SpinKitFadingCircle(
-          color: Colors.teal,
+          color: Colors.blueAccent,
           size: 150.0,
         ),
       ),

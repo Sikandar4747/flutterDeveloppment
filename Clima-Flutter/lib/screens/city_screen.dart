@@ -11,11 +11,6 @@ class _CityScreenState extends State<CityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text('My weather'),
-        ),
-      ),
       body: Container(
         color: Color(0xFF103243),
         child: SafeArea(
