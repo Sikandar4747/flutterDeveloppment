@@ -17,7 +17,7 @@ class _CityScreenState extends State<CityScreen> {
           child: Column(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.all(20.0),
+                padding: EdgeInsets.all(10.0),
                 child: TextField(
                   style: TextStyle(
                     color: Colors.black,
@@ -29,13 +29,27 @@ class _CityScreenState extends State<CityScreen> {
                 ),
               ),
               // ignore: deprecated_member_use
-              FlatButton(
+              RaisedButton(
                 onPressed: () {
                   Navigator.pop(context, inputCity);
                 },
-                child: Text(
-                  'Get Weather',
-                  style: kButtonTextStyle,
+                elevation: 100.0,
+                color: Color(0xFF103243),
+                child: Container(
+                  padding: EdgeInsets.all(5.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.blueGrey,
+                        blurRadius: 6.0,
+                      ),
+                    ],
+                  ),
+                  child: Text(
+                    'Get Weather',
+                    style: kButtonTextStyle,
+                  ),
                 ),
               ),
             ],
