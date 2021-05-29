@@ -1,4 +1,5 @@
 import 'package:flash_chat/component/rounded_button.dart';
+import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flash_chat/constants.dart';
 import 'chat_screen.dart';
@@ -88,6 +89,21 @@ class _LoginScreenState extends State<LoginScreen> {
                     print(e);
                   }
                 },
+              ),
+              Column(
+                children: [
+                  Text(
+                    'SignUp?',
+                    textAlign: TextAlign.right,
+                  ),
+                  RoundedButton(
+                    'Signup',
+                    Colors.lightBlue,
+                    () {
+                      Navigator.pushNamed(context, RegistrationScreen.id);
+                    },
+                  ),
+                ],
               ),
             ],
           ),
